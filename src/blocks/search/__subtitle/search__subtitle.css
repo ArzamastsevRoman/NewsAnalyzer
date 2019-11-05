@@ -1,0 +1,9 @@
+.search__subtitle {
+    font-family: roboto-regular;
+    font-weight: 100;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #fff;
+    margin: 32px 0 0;
+    width: 40%;
+}

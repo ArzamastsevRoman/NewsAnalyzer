@@ -1,0 +1,6 @@
+.author__container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 80px auto;
+}

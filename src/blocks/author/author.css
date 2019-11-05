@@ -1,0 +1,10 @@
+@import url(./__container/author__container.css);
+@import url(./__avatar/author__avatar.css);
+@import url(./__content/author__content.css);
+@import url(./__title/author__title.css);
+@import url(./__about/author__about.css);
+
+.author {
+    width: 100%;
+    max-height: 752px;
+}

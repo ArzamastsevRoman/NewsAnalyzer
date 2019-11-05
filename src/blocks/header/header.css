@@ -1,0 +1,14 @@
+@import url(./__title/header__title.css);
+@import url(./__content/header__content.css);
+@import url(./__content-link/header__content-link.css);
+@import url(./__link/header__link.css);
+@import url(./__link-underline/header__link-underline.css);
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-block-end: 1px;
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, .2);
+}

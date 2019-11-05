@@ -1,0 +1,8 @@
+@import url(./_li/footer__menu_li.css);
+@import url(./_link/footer__menu_link.css);
+
+.footer__menu {
+    display: flex;
+    list-style:none;
+    padding: 0;
+}

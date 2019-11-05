@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewsAnalyzer</title>
+    <link rel="icon" href="./images/favicon.png">
+    <meta name="description" content="сервис для анализа происходящих в мире событий">
+    <meta name="author" content="Арзамасцев Роман">
+</head>
+<body>
+    <main class="main">
+        <div class="search">
+            <header class = 'header'>
+                <h2 class="header__title">NewsAnalyzer</h2>
+                <div class="header__content">
+                    <div class="header__content-link">
+                        <a href="index.html" class="header__link">Главная</a>
+                        <div class="header__link-underline"></div>
+                    </div>
+                    <div class="header__content-link">
+                        <a href="about.html" class="header__link">О проекте</a>
+                        <div class="header__link-underline"></div>
+                    </div>
+                </div>
+            </header>
+            <h1 class="search__title">Что в мире творится?</h1>
+            <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
+            <div class="search__content-input">
+                <input type="text" class='search__input' placeholder="Введите тему новости">
+                <button class='search__button'>Искать</button>
+            </div>    
+        </div>
+        <section class="preloader">
+            <i class="preloader__circle"></i>
+            <p class="preloader__name">Идёт поиск новостей</p>
+        </section>
+        <section class="not-found">
+            <img src="<%=require('./images/not-found.png')%>" alt="not found image" class="not-found__image">
+            <h3 class="not-found__title">Ничего не найдено</h3>
+            <p class="not-found__content">К сожалению по вашему запросу ничего не найдено</p>
+        </section>
+        <section class="author">
+            <div class="author__container">
+                <img src="<%=require('./images/avatar.png')%>" alt="avatar" class="author__avatar">
+                <div class="author__content">
+                    <h3 class="author__title">Об авторе</h3>
+                    <p class="author__about">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+                    <p class="author__about">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p class="footer__copyright">&#169; 2019 Арзамасцев Роман</p>
+            <nav class="footer__menu">
+                <ul class="footer__menu">
+                    <li class="footer__menu_li"><a href="index.html" class="footer__menu_link">Главная</a></li>
+                    <li class="footer__menu_li"><a href="about.html" class="footer__menu_link">О проекте</a></li>
+                    <li class="footer__menu_li"><a href="https://praktikum.yandex.ru/" class="footer__menu_link">Яндекс.Практикум</a></li>
+                </ul>
+            </nav>
+            <div class="footer__container-icon">
+                <a href="https://github.com/" class="footer__link"><img src="<%=require('./images/github.png')%>" alt="icon github" class="footer__icon"></a>
+                <a href="https://www.facebook.com/" class="footer__link"><img src="<%=require('./images/facebook.png')%>" alt="icon facebook" class="footer__icon"></a> 
+            </div>
+        </footer>
+    </main>
+    <script src = "<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>
