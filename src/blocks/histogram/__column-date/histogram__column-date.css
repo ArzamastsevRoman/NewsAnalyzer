@@ -1,0 +1,5 @@
+.histogram__column-date {
+    display: flex;
+    flex-direction: column;
+    width: 104px;
+}

@@ -8,11 +8,13 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry: {
-        main: './src/index.js'
+        main: './src/pages/scripts/index.js',
+        analytics: './src/pages/scripts/analytics.js',
+        about: './src/pages/scripts/about.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: './[name]/[name].[chunkhash].js'
     },
     resolve: {
         alias: {
@@ -29,13 +31,13 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/, use: [
-                (isDev ? 'style-loader' : {
-                    loader: MiniCssExtractPlugin.loader, 
-                    
-                }),
-                'css-loader', 
-                'postcss-loader'
+                test: /\.css$/, 
+                use: [
+                    (isDev ? 'style-loader' : {
+                        loader: MiniCssExtractPlugin.loader, 
+                    }),
+                    'css-loader', 
+                    'postcss-loader'
                 ] 
             },
             {
@@ -59,12 +61,22 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: './[name]/[name].[contenthash].css'
         }),
         new HtmlWebpackPlugin({ 
             inject: false,
             template: './src/index.html',
             filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({ 
+            inject: false,
+            template: './src/about.html',
+            filename: 'about.html'
+        }),
+        new HtmlWebpackPlugin({ 
+            inject: false,
+            template: './src/analytics.html',
+            filename: 'analytics.html'
         }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({

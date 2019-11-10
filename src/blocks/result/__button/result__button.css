@@ -1,0 +1,17 @@
+.result__button {
+    background-color: #FFF;
+    border: 1px solid #fff;
+    border-radius: 80px;
+    margin: 64px auto 80px;
+    width: calc(100% - 576px*2);
+    min-height: 64px;
+    height: 100%;
+    font-family: 'roboto-regular';
+    font-weight: 100;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #1a1b22;
+    display: block;
+    cursor: pointer;   
+}

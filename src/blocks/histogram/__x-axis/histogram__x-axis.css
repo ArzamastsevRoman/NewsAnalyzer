@@ -1,0 +1,6 @@
+@import url(./_day/histogram__x-axis_day.css);
+
+.histogram__x-axis {
+    display: flex;
+    margin: 16px 0 0 0;
+}

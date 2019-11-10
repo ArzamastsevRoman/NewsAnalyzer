@@ -1,0 +1,10 @@
+.histogram__name-column {
+    width: 104px;
+    margin: 0 13px 0 0;
+    font-family: roboto-regular;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #b6bcbf;
+    display: flex;
+    flex-direction: column;
+}

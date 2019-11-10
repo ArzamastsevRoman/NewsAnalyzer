@@ -7,8 +7,6 @@
     text-decoration: none;
 }
 
-.header__link:visited {
+.header__link:active {
     color: #fff;
-    
-
 }

@@ -1,0 +1,9 @@
+.history__link {
+    margin: 0;
+    text-decoration: none;
+    align-self: center;
+    font-family: roboto-regular;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #1a1b22;
+}

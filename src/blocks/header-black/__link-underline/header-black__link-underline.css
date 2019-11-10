@@ -1,0 +1,9 @@
+.header-black__link-underline {
+    content: ' ';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    background-color: #1a1b22;
+    
+}

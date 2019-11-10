@@ -1,0 +1,14 @@
+@import url(./_image/result__card_image.css);
+@import url(./_data/result__card_data.css);
+@import url(./_title/result__card_title.css);
+@import url(./_content/result__card_content.css);
+@import url(./_link/result__card_link.css);
+
+.result__card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}

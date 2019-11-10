@@ -1,3 +1,6 @@
+@import url(./_main/header__content_main.css);
+@import url(./_about/header__content_about.css);
+
 .header__content {
     display: flex;
     margin-right: 101px;

@@ -1,0 +1,5 @@
+.history__container {
+    margin: 72px 112px 0 104px;
+    display: flex;
+    justify-content: space-between;
+}
