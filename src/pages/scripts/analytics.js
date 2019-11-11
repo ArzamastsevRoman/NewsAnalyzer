@@ -11,7 +11,6 @@ const main = document.querySelector('#main-link');
 
 function headerAct () {
     main.classList.add('header-black__link-act');
-    //document.querySelector('#main-underline').classList.add('header-black__link-underline');
 };
 
 headerAct ();

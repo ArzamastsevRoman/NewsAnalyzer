@@ -1,0 +1,5 @@
+.history__card-info_name {
+    margin: 0 0 0 16px;
+    display: flex;
+    flex-direction: column;
+}
