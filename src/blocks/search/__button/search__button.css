@@ -27,12 +27,12 @@
     background-color: #2A65CC;
 }
 
-button:active, button:focus {
+.search__button:active, .search__button:focus {
     outline: none;
-  }
-  button::-moz-focus-inner {
+}
+.search__button::-moz-focus-inner {
     border: 0;
-  }
+}
 
 @media screen and (min-width: 768px) and (max-width: 850px) {
     .search__button {
