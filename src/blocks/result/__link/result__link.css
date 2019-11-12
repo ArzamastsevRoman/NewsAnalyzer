@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+.result__link:active {
+    opacity: 0.9;
+}
+
 @media screen and (max-width: 767px) {
     .result__link {
         margin: 16px 0 0;

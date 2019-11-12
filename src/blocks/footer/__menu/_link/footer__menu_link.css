@@ -6,8 +6,13 @@
     color: #1a1b22;
 }
 
+.footer__menu_link:active {
+    opacity: 0.9;
+}
+
 @media screen and (max-width: 767px) {
     .footer__menu_link {
         line-height: 3rem;
     }
 }
+

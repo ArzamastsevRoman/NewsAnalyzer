@@ -16,6 +16,10 @@
     cursor: pointer;   
 }
 
+.result__button:active {
+    opacity: 0.9;
+}
+
 @media screen and (min-width: 768px) and (max-width: 850px) {
     .result__button {
         margin: 0 0 40px;

@@ -19,6 +19,21 @@
     right: 0;     
 }
 
+.search__button:hover{
+    background-color:#347EFF;
+}
+
+.search__button:active {
+    background-color: #2A65CC;
+}
+
+button:active, button:focus {
+    outline: none;
+  }
+  button::-moz-focus-inner {
+    border: 0;
+  }
+
 @media screen and (min-width: 768px) and (max-width: 850px) {
     .search__button {
         width: 30%;

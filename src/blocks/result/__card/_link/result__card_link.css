@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+.result__card_link:active {
+    opacity: 0.9;
+}
+
 @media screen and (min-width: 768px) and (max-width: 850px) {
     .result__card_link {
         margin: 12px 0 16px 16px;
