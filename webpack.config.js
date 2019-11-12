@@ -36,10 +36,9 @@ module.exports = {
                     (isDev ? 'style-loader' : {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPatch: '../',
+                            publicPatch: '../'
                         } 
                     }),
-                    
                     'css-loader', 
                     'postcss-loader'
                 ] 
