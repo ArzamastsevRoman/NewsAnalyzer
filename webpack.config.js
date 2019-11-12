@@ -21,6 +21,11 @@ module.exports = {
           'super-helpers': path.resolve(__dirname, './src/helpers')
         }
     },
+    resolve: {
+        alias: {
+          'super-helpers': path.resolve(__dirname, './src/helpers')
+        }
+    },
     module: {
         rules: [
             {
@@ -35,9 +40,7 @@ module.exports = {
                 use: [
                     (isDev ? 'style-loader' : {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            publicPatch: '../../../'
-                        } 
+                        
                     }),
                     'css-loader', 
                     'postcss-loader'
