@@ -2,7 +2,13 @@
     margin-bottom: 56px;
     position: relative;
     width: 100%;
-    box-sizing: border-box; }
+    box-sizing: border-box; 
+  }
+  @media screen and (max-width: 767px) {
+    .glide {
+        margin: 0 0 24px;
+    }
+  }
     .glide * {
       box-sizing: inherit; }
     .glide__track {
@@ -32,6 +38,19 @@
         user-select: none;
         -webkit-touch-callout: none;
         -webkit-tap-highlight-color: transparent; }
+        
+      @media screen and (max-width: 850px) {
+          .glide__slide {
+              min-width: 336px;
+          }
+      }
+
+      @media screen and (max-width: 676px) {
+        .glide__slide {
+            min-width: 288px;
+        }
+      }
+
       .glide__slide a {
         user-select: none;
         -webkit-user-drag: none;

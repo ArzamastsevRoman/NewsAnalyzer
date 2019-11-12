@@ -6,3 +6,7 @@
     color: #b6bcbf;
     text-decoration: none;
 }
+
+.header-black__link:hover {
+    color: #1a1b22;
+}

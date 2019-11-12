@@ -3,3 +3,9 @@
     flex-direction: column;
     margin: 24px 24px 0;
 }
+
+@media screen and (max-width: 767px) {
+    .history__card-container {
+        margin: 16px 16px 0;
+    }
+}

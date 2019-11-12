@@ -1,0 +1,23 @@
+.history__button_hist {
+    margin: 24px 16px 32px;
+    height: 56px;
+    background-color: #f5f6f7;
+    border: 1px solid #1a1b22;
+    border-radius: 80px;
+    width: calc(100% - 32px);
+    font-family: 'roboto-regular';
+    font-weight: 100;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #1a1b22;
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+}
+
+@media screen and (min-width: 767px) {
+    .history__button_hist {
+        display: none;
+    }
+}

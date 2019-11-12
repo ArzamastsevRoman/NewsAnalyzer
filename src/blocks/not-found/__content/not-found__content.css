@@ -7,3 +7,9 @@
     width: calc(100% - 1110px);
     text-align: center;
 }
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .not-found__content {
+        width: 60%;
+    }
+}

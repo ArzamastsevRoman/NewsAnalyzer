@@ -3,3 +3,9 @@
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 767px) {
+    .history__card-info_name {
+        margin: 0 0 0 12px;
+    }
+}

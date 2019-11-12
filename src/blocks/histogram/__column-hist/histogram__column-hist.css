@@ -18,3 +18,9 @@
 .histogram__column-hist:nth-of-type(7) {
     margin: 0;
 }
+
+@media screen and (max-width: 767px) {
+    .histogram__column-hist {
+        margin: 0 0 28px 0;
+    }
+}

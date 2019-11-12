@@ -1,8 +1,23 @@
 .result__card_link {
-    margin: 0 0 24px 24px;
+    margin: 0 24px 24px;
     font-family: robotoslab;
     font-size: 1.1rem;
     line-height: 1.2rem;
     color: #b6bcbf;
     text-decoration: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .result__card_link {
+        margin: 12px 0 16px 16px;
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .result__card_link {
+        margin: 12px 0 16px 16px;
+        
+    }
 }

@@ -1,5 +1,5 @@
 .result__link {
-    margin: 0 112px 0 0;
+    margin: 0;
     font-family: roboto-regular;
     font-size: 1.1rem;
     line-height: 1.5rem;
@@ -7,3 +7,8 @@
     text-decoration: none;
 }
 
+@media screen and (max-width: 767px) {
+    .result__link {
+        margin: 16px 0 0;
+    }
+}

@@ -5,3 +5,9 @@
     line-height: 1.5rem;
     color: #1a1b22;
 }
+
+@media screen and (max-width: 767px) {
+    .footer__menu_link {
+        line-height: 3rem;
+    }
+}

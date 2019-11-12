@@ -3,3 +3,15 @@
     flex-direction: column;
     width: 40%;
 }
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .author__content {
+        width: 62%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .author__content {
+        width: 100%;
+    }
+}

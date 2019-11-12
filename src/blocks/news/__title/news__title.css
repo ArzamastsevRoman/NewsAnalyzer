@@ -8,3 +8,19 @@
     line-height: 2.9rem;
     color: #1a1b22;
 }
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .news__title {
+        margin: 64px 0 0;
+        font-size: 2rem;
+        line-height: 2.1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .news__title {
+        margin: 0;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+    }
+}

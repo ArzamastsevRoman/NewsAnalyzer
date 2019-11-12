@@ -1,4 +1,5 @@
 @import url(./_right/history__button_right.css);
+@import url(./_hist/history__button_hist.css);
 
 .history__button {
     position: absolute;
@@ -8,4 +9,10 @@
     width: 100%;
     min-height: 288px;
     background: linear-gradient(180deg, rgba(246, 246, 247, 0) 0%, #f5f6f7 100%);
+}
+
+@media (max-width: 1400px) {
+    .history__button {
+        display: none;
+    }
 }

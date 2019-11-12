@@ -1,8 +1,22 @@
 .header__title {
-    margin-left: 104px;
+    margin: 0 0 0 7%;
     font-family: robotoslab;
     font-weight: bold;
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .header__title {
+        margin: 0 0 0 5%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header__title {
+        margin: 0 0 0 16px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
 }

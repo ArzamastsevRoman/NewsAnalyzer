@@ -1,8 +1,22 @@
 .header-black__title {
-    margin-left: 104px;
+    margin: 0 0 0 104px;
     font-family: robotoslab;
     font-weight: bold;
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: #1a1b22;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .header-black__title {
+        margin: 0 0 0 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-black__title {
+        margin: 0 0 0 16px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
 }

@@ -1,8 +1,20 @@
 @import url(./_li/footer__menu_li.css);
 @import url(./_link/footer__menu_link.css);
+@import url(./_ul/footer__menu_ul.css);
 
 .footer__menu {
     display: flex;
-    list-style:none;
+    align-items: center;
+    
     padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .footer__menu {
+        margin: 20px 0 0 16px;
+        flex-direction: column;
+        order: -1;
+        align-items: flex-start;
+    }
 }

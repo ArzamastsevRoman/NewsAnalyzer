@@ -4,3 +4,9 @@
     display: flex;
     margin: 16px 0 0 0;
 }
+
+@media screen and (max-width: 767px) {
+    .histogram__x-axis {
+        display: none;
+    }
+}

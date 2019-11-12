@@ -1,8 +1,27 @@
 .result__card_content {
-    margin: 16px 0 18px 24px;
-    
+    margin: 16px 24px 18px;
     font-family: roboto-regular;
     font-size: 1.1rem;
     line-height: 1.5rem;
     color: #1a1b22;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .result__card_content {
+        margin: 10px 16px 0;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        max-height: 88px;
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .result__card_content {
+        margin: 10px 16px 0;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        max-height: 88px;
+        overflow: scroll;
+    }
 }

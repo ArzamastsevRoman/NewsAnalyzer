@@ -2,3 +2,9 @@
     display: flex;
     margin: 8px 0 0 0;
 }
+
+@media screen and (max-width: 767px) {
+    .histogram__area {
+        margin: 18px 0 0 0;
+    }
+}
