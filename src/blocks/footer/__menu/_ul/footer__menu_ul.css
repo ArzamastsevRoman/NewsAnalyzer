@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) {
     .footer__menu_ul {
         display: flex;
     }
