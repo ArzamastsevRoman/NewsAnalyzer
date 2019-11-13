@@ -1,10 +1,10 @@
 .preloader__circle {
-    display: block;
+     display: block;
     width: 74px;
     height: 74px;
-    border: 1px solid #444;
     border-bottom-color: #888;
-        
+    background-image: url(../../../images/Ellipse.png);
+    background-size: cover;
     border-radius: 50%;
         
     
