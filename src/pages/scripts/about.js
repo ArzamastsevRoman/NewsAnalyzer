@@ -16,6 +16,12 @@ import '../../blocks/glide/glide.core.css'
 
 const glide = new Glide('.glide', {
     type: 'slider',
+    type: "slider",
+          perView: 3,
+          startAt: 0,
+          focusAt: 'center',
+          peek: 100,
+          gap: 16,
     breakpoints: {
         1440: {
           type: "slider",
