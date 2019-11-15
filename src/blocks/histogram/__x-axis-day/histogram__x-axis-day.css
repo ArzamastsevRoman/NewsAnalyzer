@@ -1,4 +1,4 @@
-.histogram__x-axis_day {
+.histogram__x-axis-day {
     margin: 0 0 0 182px;
     width: 80px;
     text-align: center;
@@ -8,17 +8,17 @@
     color: #b6bcbf;
 }
 
-.histogram__x-axis_day:nth-of-type(1) {
+.histogram__x-axis-day:nth-of-type(1) {
     margin: 0 0 0 117px;
     text-align: start;
 }
 
-.histogram__x-axis_day:nth-of-type(5) {
+.histogram__x-axis-day:nth-of-type(5) {
     text-align: end;
 }
 
 @media screen and (min-width: 768px) and (max-width: 850px) {
-    .histogram__x-axis_day {
+    .histogram__x-axis-day {
         margin: 0 0 0 42px;
     }
 }

@@ -1,7 +1,3 @@
-@import url(./_li/footer__menu_li.css);
-@import url(./_link/footer__menu_link.css);
-@import url(./_ul/footer__menu_ul.css);
-
 .footer__menu {
     display: flex;
     align-items: center;

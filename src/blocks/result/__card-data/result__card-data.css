@@ -1,4 +1,4 @@
-.result__card_data {
+.result__card-data {
     font-family: robotoslab;
     font-size: 1.1rem;
     line-height: 1.5rem;
@@ -7,13 +7,13 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 850px) {
-    .result__card_data {
+    .result__card-data {
         margin: 16px 16px 0;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .result__card_data {
+    .result__card-data {
         margin: 15px 16px 0;
     }
 }

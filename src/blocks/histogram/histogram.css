@@ -12,6 +12,8 @@
 @import url(./__column-line/histogram__column-line.css);
 @import url(./__column-hist/histogram__column-hist.css);
 @import url(./__column-hist-text/histogram__column-hist-text.css);
+@import url(./__name-column-span/histogram__name-column-span.css);
+@import url(./__x-axis-day/histogram__x-axis-day.css);
 
 .histogram {
     width: 100%;

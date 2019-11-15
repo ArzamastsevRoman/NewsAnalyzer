@@ -2,6 +2,9 @@
 @import url(./__subtitle/news__subtitle.css);
 @import url(./__title/news__title.css);
 @import url(./__content/news__content.css);
+@import url(./__subtitle-span/news__subtitle-span.css);
+@import url(./__title-span/news__title-span.css);
+@import url(./__content-span/news__content-span.css);
 
 .news {
     width: 100%;
