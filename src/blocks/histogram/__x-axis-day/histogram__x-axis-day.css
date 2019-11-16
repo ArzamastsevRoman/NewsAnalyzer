@@ -1,5 +1,5 @@
 .histogram__x-axis-day {
-    margin: 0 0 0 182px;
+    margin: 0;
     width: 80px;
     text-align: center;
     font-family: roboto-regular;
@@ -9,7 +9,6 @@
 }
 
 .histogram__x-axis-day:nth-of-type(1) {
-    margin: 0 0 0 117px;
     text-align: start;
 }
 
@@ -17,8 +16,9 @@
     text-align: end;
 }
 
-@media screen and (min-width: 768px) and (max-width: 850px) {
+@media screen and (max-width: 767px) {
     .histogram__x-axis-day {
-        margin: 0 0 0 42px;
+        display: none;
     }
+
 }

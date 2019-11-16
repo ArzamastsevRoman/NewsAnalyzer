@@ -2,7 +2,7 @@ import '../index.css'
 
 import '../../blocks/main/main.css'
 import '../../blocks/body/body.css'
-import '../../blocks/header-black/header-black.css'
+import '../../blocks/header/header.css'
 import '../../blocks/author/author.css'
 import '../../blocks/footer/footer.css'
 import '../../blocks/about/about.css'
@@ -52,12 +52,12 @@ const glide = new Glide('.glide', {
 
 glide.mount();
 
-//подсветка меню
-const about = document.querySelector('#about-link');
+// //подсветка меню
+// const about = document.querySelector('#about-link');
 
-function headerAct () {
-    about.classList.add('header-black__link-act');
-    document.querySelector('#about-underline').classList.add('header-black__link-underline');
-};
+// function headerAct () {
+//     about.classList.add('header-black__link-act');
+//     document.querySelector('#about-underline').classList.add('header-black__link-underline');
+// };
 
-headerAct ();
+// headerAct ();

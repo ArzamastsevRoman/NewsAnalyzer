@@ -1,3 +1,7 @@
+@import url(./_active/header__link_active.css);
+@import url(./_active_black/header__link_active_black.css);
+@import url(./_black/header__link_black.css);
+
 .header__link {
     font-family: roboto-regular;
     font-weight: 500;
@@ -9,4 +13,12 @@
 
 .header__link:hover {
     color: #fff;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .header__link {
+        font-size: 1rem;
+    }
 }

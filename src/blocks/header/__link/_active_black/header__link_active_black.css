@@ -1,0 +1,13 @@
+.header__link.header__link_active_black {
+    color: #1a1b22;
+}
+
+.header__link_active_black:after {
+    content: ' ';
+    height: 2px;
+    width: 100%;
+    display: block;
+    background: #1a1b22;
+    position: absolute;
+    bottom: 0;
+}
