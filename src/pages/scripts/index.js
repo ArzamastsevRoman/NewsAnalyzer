@@ -9,12 +9,4 @@ import '../../blocks/footer/footer.css'
 import '../../blocks/preloader/preloader.css'
 import '../../blocks/not-found/not-found.css'
 import '../../blocks/result/result.css'
-
-// const main = document.querySelector('#main-link');
-
-// function headerAct () {
-//     main.classList.add('header__link-act');
-//     document.querySelector('#main-underline').classList.add('header__link-underline');
-// };
-
-// headerAct ();
+import '../../blocks/visually-hidden/visually-hidden.css'

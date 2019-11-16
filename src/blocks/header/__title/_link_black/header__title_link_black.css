@@ -3,3 +3,7 @@
     margin: 0;
     text-decoration: none;
 }
+
+.header__title.header__title_link_black:active {
+    opacity: 0.9;
+}

@@ -15,7 +15,9 @@
     color: #fff;
 }
 
-
+.header__link:active {
+    opacity: 0.9;
+}
 
 @media screen and (max-width: 767px) {
     .header__link {

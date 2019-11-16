@@ -52,12 +52,3 @@ const glide = new Glide('.glide', {
 
 glide.mount();
 
-// //подсветка меню
-// const about = document.querySelector('#about-link');
-
-// function headerAct () {
-//     about.classList.add('header-black__link-act');
-//     document.querySelector('#about-underline').classList.add('header-black__link-underline');
-// };
-
-// headerAct ();
