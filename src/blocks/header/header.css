@@ -4,6 +4,7 @@
 @import url(./__menu/header__menu.css);
 @import url(./__menu-item/header__menu-item.css);
 @import url(./_color_black/header_color_black.css);
+@import url(./__title-link/header__title-link.css);
 
 .header {
     display: flex;

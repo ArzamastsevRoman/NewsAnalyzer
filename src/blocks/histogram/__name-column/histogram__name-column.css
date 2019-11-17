@@ -1,7 +1,7 @@
 .histogram__name-column {
     width: 104px;
     margin: 0;
-    font-family: roboto-regular;
+    font-family: roboto-regular, sans-serif;
     font-size: 0.7rem;
     line-height: 1rem;
     color: #b6bcbf;

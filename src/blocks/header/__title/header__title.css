@@ -2,7 +2,7 @@
 @import url(./_link_black/header__title_link_black.css);
 
 .header__title {
-    font-family: robotoslab;
+    font-family: robotoslab, sans-serif-medium;
     font-weight: bold;
     font-size: 1.25rem;
     line-height: 1.5rem;

@@ -1,9 +1,9 @@
 .result__card-data {
-    font-family: robotoslab;
+    font-family: robotoslab, sans-serif;
     font-size: 1.1rem;
     line-height: 1.5rem;
     color: #b6bcbf;
-    margin: 12px 24px 0;
+    margin: 20px 24px 0;
 }
 
 @media screen and (min-width: 768px) and (max-width: 850px) {

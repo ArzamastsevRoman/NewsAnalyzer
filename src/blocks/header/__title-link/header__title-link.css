@@ -1,0 +1,11 @@
+@import url(./_color_black/header__title-link_color_black.css);
+
+.header__title-link {
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+}
+
+.header__title-link:active {
+    opacity: 0.9;
+}

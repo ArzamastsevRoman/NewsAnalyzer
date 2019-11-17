@@ -12,6 +12,8 @@
 @import url(./__card-title/history__card-title.css);
 @import url(./__card-mail/history__card-mail.css);
 @import url(./__card-content/history__card-content.css);
+@import url(./__card-info-name/history__card-info-name.css);
+@import url(./__button-hist/history__button-hist.css);
 
 .history {
     width: 100%;

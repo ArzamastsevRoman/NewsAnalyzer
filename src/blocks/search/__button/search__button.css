@@ -5,7 +5,7 @@
     
     width: 27%;
     height: 100%;
-    font-family: 'roboto-regular';
+    font-family: 'roboto-regular', sans-serif;
     font-weight: 100;
     font-size: 1.1rem;
     line-height: 1.5rem;
@@ -19,7 +19,7 @@
     right: 0;     
 }
 
-.search__button:hover{
+.search__button:hover {
     background-color:#347EFF;
 }
 

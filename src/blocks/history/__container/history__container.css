@@ -13,5 +13,6 @@
 @media screen and (max-width: 767px) {
     .history__container {
         margin: 32px 16px 0;
+        width: 50%;
     }
 }

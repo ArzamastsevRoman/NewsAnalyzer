@@ -5,7 +5,7 @@
     box-sizing: border-box;
     border-radius: 100px;
     backdrop-filter: blur(8px);
-    font-family: 'roboto-regular';
+    font-family: 'roboto-regular', sans-serif;
     font-size: 1rem;
     line-height: 1.3rem;
     color: #1a1b22;

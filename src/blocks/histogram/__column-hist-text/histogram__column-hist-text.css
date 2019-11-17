@@ -8,7 +8,7 @@
 
 .histogram__column-hist-text {
     margin: 0 0 0 6px;
-    font-family: roboto-regular;
+    font-family: roboto-regular, sans-serif;
     font-size: 0.7rem;
     color: #fff;
 }

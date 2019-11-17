@@ -1,6 +1,6 @@
 .footer__menu-link {
     text-decoration: none;
-    font-family: roboto-regular;
+    font-family: roboto-regular, sans-serif;
     font-size: 1.1rem;
     line-height: 1.5rem;
     color: #1a1b22;
