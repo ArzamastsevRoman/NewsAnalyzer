@@ -16,15 +16,18 @@
     cursor: pointer;   
 }
 
-.result__button:active {
-    opacity: 0.9;
+.result__button:hover {
+    background: rgba(255, 255, 255, .8);
 }
 
-.result__button:active, .result__button:focus {
-    outline: none;
-}
-.result__button::-moz-focus-inner {
-    border: 0;
+.result__button:active,
+.result__button:focus {
+    opacity: 0.9;
+    cursor: pointer;
+    outline: aqua;
+    border: 1px solid aqua;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, .6);
 }
 
 @media screen and (min-width: 768px) and (max-width: 850px) {

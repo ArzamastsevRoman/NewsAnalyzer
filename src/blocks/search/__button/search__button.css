@@ -28,14 +28,17 @@
 .search__button:focus {
     background-color: #2A65CC;
     cursor: pointer;
+    outline: aqua;
+    border: 1px solid aqua;
+    border-radius: 100px;
 }
 
-.search__button:active, .search__button:focus {
+/* .search__button:active, .search__button:focus {
     outline: none;
-}
-.search__button::-moz-focus-inner {
+} */
+/* .search__button::-moz-focus-inner {
     border: 0;
-}
+} */
 
 @media screen and (min-width: 768px) and (max-width: 850px) {
     .search__button {

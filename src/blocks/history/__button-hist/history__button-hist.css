@@ -16,6 +16,20 @@
     z-index: 2;
 }
 
+.history__button-hist:hover {
+    background: rgba(255, 255, 255, .8);
+}
+
+.history__button-hist:active,
+.history__button-hist:focus {
+    opacity: 0.9;
+    cursor: pointer;
+    outline: aqua;
+    border: 1px solid aqua;
+    border-radius: 100px;
+    background: rgb(255, 255, 255);
+}
+
 @media screen and (min-width: 767px) {
     .history__button-hist {
         display: none;
