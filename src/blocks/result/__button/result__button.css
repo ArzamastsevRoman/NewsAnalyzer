@@ -17,7 +17,7 @@
 }
 
 .result__button:hover {
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .6);
 }
 
 .result__button:active,
@@ -27,7 +27,7 @@
     outline: aqua;
     border: 1px solid aqua;
     border-radius: 100px;
-    background: rgba(255, 255, 255, .6);
+    background: rgba(255, 255, 255, .4);
 }
 
 @media screen and (min-width: 768px) and (max-width: 850px) {
