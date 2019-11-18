@@ -21,10 +21,13 @@
 
 .search__button:hover {
     background-color:#347EFF;
+    cursor: pointer;
 }
 
-.search__button:active {
+.search__button:active,
+.search__button:focus {
     background-color: #2A65CC;
+    cursor: pointer;
 }
 
 .search__button:active, .search__button:focus {
