@@ -1,0 +1,21 @@
+.not-found__content {
+    font-family: roboto-regular, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #b6bcbf;
+    margin: 16px auto 80px;
+    width: 25%;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .not-found__content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .not-found__content {
+        width: 80%;
+    }
+}

@@ -1,0 +1,16 @@
+.footer__menu-li {
+    margin: 0 40px 0 0;
+    list-style:none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .footer__menu-li {
+        margin: 0 25px 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer__menu-li {
+        margin: 0;
+    }
+}

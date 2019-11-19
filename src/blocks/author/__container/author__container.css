@@ -1,0 +1,23 @@
+.author__container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 80px auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .author__container {
+        margin: 40px 40px 48px;
+        width: calc(100% - 80px);
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .author__container {
+        margin: 32px 24px;
+        width: calc(100% - 48px);
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}

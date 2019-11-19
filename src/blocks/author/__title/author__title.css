@@ -1,0 +1,21 @@
+.author__title {
+    margin: 41px 0 0;
+    font-family: robotoslab, serif;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    color: #1a1822;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .author__title {
+        margin: 0;
+        font-size: 1.9rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .author__title {
+        margin: 24px 0 0;
+    }
+}

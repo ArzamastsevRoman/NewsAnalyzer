@@ -1,0 +1,24 @@
+@import url(./__title/histogram__title.css);
+@import url(./__container/histogram__container.css);
+@import url(./__canvas/histogram__canvas.css);
+@import url(./__content/histogram__content.css);
+@import url(./__head/histogram__head.css);
+@import url(./__name-column/histogram__name-column.css);
+@import url(./__axis/histogram__axis.css);
+@import url(./__x-axis/histogram__x-axis.css);
+@import url(./__area/histogram__area.css);
+@import url(./__column-date/histogram__column-date.css);
+@import url(./__date/histogram__date.css);
+@import url(./__column-line/histogram__column-line.css);
+@import url(./__column-hist/histogram__column-hist.css);
+@import url(./__column-hist-text/histogram__column-hist-text.css);
+@import url(./__name-column-span/histogram__name-column-span.css);
+@import url(./__x-axis-day/histogram__x-axis-day.css);
+
+.histogram {
+    width: 100%;
+    background-color: #f5f6f7;
+    display: flex;
+    flex-direction: column;
+    
+}

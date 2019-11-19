@@ -1,0 +1,11 @@
+.histogram__content {
+    display: flex;
+    flex-direction: column;
+    margin: 48px 0 0;
+}
+
+@media screen and (max-width: 767px) {
+    .histogram__content {
+        margin: 16px 0 0;
+    }
+}

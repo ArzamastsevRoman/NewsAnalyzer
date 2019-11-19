@@ -1,0 +1,25 @@
+.history__link {
+    margin: 0;
+    text-decoration: none;
+    align-self: center;
+    font-family: roboto-regular, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #1a1b22;
+}
+.history__link:active {
+    opacity: 0.9;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .history__link {
+        align-self: flex-start;
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .history__link {
+        display: none;
+    }
+}

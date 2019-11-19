@@ -1,0 +1,23 @@
+.history__title {
+    margin: 0;
+    font-family: robotoslab, serif;
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+    color: #1a1b22;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .history__title {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .history__title {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        width: calc(100%);
+    }
+}

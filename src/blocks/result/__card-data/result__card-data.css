@@ -1,0 +1,19 @@
+.result__card-data {
+    font-family: robotoslab, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #b6bcbf;
+    margin: 20px 24px 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .result__card-data {
+        margin: 16px 16px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .result__card-data {
+        margin: 15px 16px 0;
+    }
+}

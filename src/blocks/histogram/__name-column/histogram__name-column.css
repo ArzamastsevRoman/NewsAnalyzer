@@ -1,0 +1,22 @@
+.histogram__name-column {
+    width: 104px;
+    margin: 0;
+    font-family: roboto-regular, sans-serif;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #b6bcbf;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .histogram__name-column:nth-of-type(2) {
+        margin: 0 0 0 13px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .histogram__name-column {
+        width: 64px;
+    } 
+}

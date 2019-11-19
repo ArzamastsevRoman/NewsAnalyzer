@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewsAnalyzer</title>
+    <link rel="icon" href="<%=require('./images/favicon.png')%>">
+    <meta name="description" content="сервис для анализа происходящих в мире событий">
+    <meta name="author" content="Арзамасцев Роман">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+    <main class="main">
+        <div class="search">
+            <header class = 'header'>
+                <h1 class="header__title"><a href='index.html' class="header__title-link">NewsAnalyzer</a></h1>
+                <nav class="header__menu">
+                    <ul class="header__content">
+                        <li class="header__menu-item"><a href="index.html" class="header__link header__link_active">Главная</a></li>
+                        <li class="header__menu-item"><a href="about.html" class="header__link">О проекте</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 class="search__title">Что в мире творится?</h1>
+            <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
+            <div class="search__content-input">
+                <input type="text" class='search__input' placeholder="Введите тему новости" required>
+                <button class='search__button'>Искать</button>
+            </div>    
+        </div>
+        <section class="preloader">
+            <h2 class="visually-hidden">Preloader</h2>
+            <i class="preloader__circle"></i>
+            <p class="preloader__name">Идёт поиск новостей</p>
+        </section>
+        <section class="not-found">
+            <img src="<%=require('./images/not-found.png')%>" alt="not found image" class="not-found__image">
+            <h3 class="not-found__title">Ничего не найдено</h3>
+            <p class="not-found__content">К сожалению по вашему запросу ничего не найдено</p>
+        </section>
+        <section class="result">
+            <div class="result__container">
+                <h2 class="result__title">Результаты поиска</h2>
+                <a href="./analytics.html" class="result__link">Посмотреть аналитику <img src="./images/Path_5.png" alt="arrow right"></a>
+            </div>
+            <div class="result__content">
+                <div class="result__card">
+                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
+                    <p class="result__card-data">2 августа, 2019</p>
+                    <h3 class="result__card-title">Национальное достояние - парки</h3>
+                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
+                </div>
+                <div class="result__card">
+                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
+                    <p class="result__card-data">2 августа, 2019</p>
+                    <h3 class="result__card-title">Национальное достояние - парки</h3>
+                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
+                </div>
+                <div class="result__card">
+                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
+                    <p class="result__card-data">2 августа, 2019</p>
+                    <h3 class="result__card-title">Национальное достояние - парки</h3>
+                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
+                </div>
+                <div class="result__card">
+                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
+                    <p class="result__card-data">2 августа, 2019</p>
+                    <h3 class="result__card-title">Национальное достояние - парки</h3>
+                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
+                </div>
+                <div class="result__card">
+                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
+                    <p class="result__card-data">2 августа, 2019</p>
+                    <h3 class="result__card-title">Национальное достояние - парки</h3>
+                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
+                </div>
+                <div class="result__card">
+                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
+                    <p class="result__card-data">2 августа, 2019</p>
+                    <h3 class="result__card-title">Национальное достояние - парки</h3>
+                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
+                </div>
+            </div>
+            <button class="result__button">Показать ещё</button>
+        </section>
+        <section class="author">
+            <div class="author__container">
+                <picture>
+                    <source srcset="<%=require('./images/avatar.png')%>" type="image/png+xml">
+                    <img src="<%=require('./images/avatar.jpg')%>" alt="avatar" class="author__avatar">
+                </picture>
+                <div class="author__content">
+                    <h3 class="author__title">Об авторе</h3>
+                    <p class="author__about">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+                    <p class="author__about">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут связаться.</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p class="footer__copyright">&#169; 2019 Арзамасцев Роман</p>
+            <nav class="footer__menu">
+                <ul class="footer__menu-ul">
+                    <li class="footer__menu-li"><a href="index.html" class="footer__menu-link">Главная</a></li>
+                    <li class="footer__menu-li"><a href="about.html" class="footer__menu-link">О проекте</a></li>
+                    <li class="footer__menu-li"><a href="https://praktikum.yandex.ru/" target="_blank" class="footer__menu-link">Яндекс.Практикум</a></li>
+                </ul>
+            </nav>
+            <div class="footer__container-icon">
+                <a href="https://github.com/" target="_blank" class="footer__link"><img src="<%=require('./images/github.png')%>" alt="icon github" class="footer__icon"></a>
+                <a href="https://www.facebook.com/" target="_blank" class="footer__link"><img src="<%=require('./images/facebook.png')%>" alt="icon facebook" class="footer__icon"></a> 
+            </div>
+        </footer>
+    </main>
+    <script src = "<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

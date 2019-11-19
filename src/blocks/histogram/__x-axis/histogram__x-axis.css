@@ -1,0 +1,41 @@
+.histogram__x-axis {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 16px 0 0 104px;
+    margin: 12px 0 0;
+}
+
+.histogram__x-axis:before {
+    content: ' ';
+    margin: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #1A1b22;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.histogram__x-axis:last-child:before {
+    display: none;
+}
+
+.histogram__x-axis:last-child {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .histogram__x-axis {
+        margin: 10px 0 0;
+        padding: 16px 0 0 117px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .histogram__x-axis {
+        margin: 8px 0 0;
+        padding: 0;
+    }
+
+}

@@ -1,0 +1,8 @@
+.header__title.header__title_link {
+    text-decoration: none;
+    margin: 0;
+}
+
+.header__title_link:active {
+    opacity: 0.9;
+}

@@ -1,0 +1,17 @@
+@import url(./__title/header__title.css);
+@import url(./__content/header__content.css);
+@import url(./__link/header__link.css);
+@import url(./__menu/header__menu.css);
+@import url(./__menu-item/header__menu-item.css);
+@import url(./_color_black/header_color_black.css);
+@import url(./__title-link/header__title-link.css);
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-block-end: 1px;
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, .2);
+}
+

@@ -1,0 +1,17 @@
+.histogram__date {
+    margin: 0 0 56px 0;
+    font-family: roboto-regular, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #1a1b22;
+}
+
+.histogram__date:nth-of-type(7) {
+    margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .histogram__date {
+        margin: 0 0 28px 0;
+    }
+}

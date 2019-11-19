@@ -1,0 +1,17 @@
+.history__swiper {
+    width: 100%;
+    position: relative;
+    margin: 64px 0 80px 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .history__swiper {
+        margin: 32px 0 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .history__swiper {
+        margin: 16px 0 0;
+    }
+}

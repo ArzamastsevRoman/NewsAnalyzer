@@ -1,0 +1,21 @@
+@import url(./__container/result__container.css);
+@import url(./__title/result__title.css);
+@import url(./__link/result__link.css);
+@import url(./__content/result__content.css);
+@import url(./__card/result__card.css);
+@import url(./__button/result__button.css);
+@import url(./__card-content/result__card-content.css);
+@import url(./__card-data/result__card-data.css);
+@import url(./__card-image/result__card-image.css);
+@import url(./__card-link/result__card-link.css);
+@import url(./__card-title/result__card-title.css);
+
+
+.result {
+    max-width: 1440px;
+    width: 100%;
+    background-color: #f5f6f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

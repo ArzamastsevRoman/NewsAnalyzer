@@ -1,0 +1,11 @@
+.about__content {
+    margin: 0 0 24px;
+    font-family: roboto-regular, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #1a1b22;
+}
+
+.about__content:nth-of-type(5) {
+    margin: 0;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewsAnalyzer</title>
+    <link rel="icon" href="./images/favicon.png">
+    <meta name="description" content="сервис для анализа происходящих в мире событий">
+    <meta name="author" content="Арзамасцев Роман">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+</head>
+<body>
+    <main class="main">
+        <section class="news">
+                <header class = 'header header_color_black'>
+                    <h1 class="header__title"><a href='index.html' class="header__title-link header__title-link_color_black">NewsAnalyzer</a></h1>
+                    <nav class="header__menu">
+                        <ul class="header__content">
+                            <li class="header__menu-item"><a href="index.html" class="header__link header__link_black">Главная</a></li>
+                            <li class="header__menu-item"><a href="about.html" class="header__link header__link_black">О проекте</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            <div class="news__container">
+                <h3 class="news__subtitle">Главная / <span class="news__subtitle-span">Аналитика</span></h3>
+                <h1 class="news__title">Вы спросили: «<span class="news__title-span">Путишествия</span>»</h1>
+                <p class="news__content">Новостей за неделю: <span class="news__content-span">34 324</span></p> 
+                <p class="news__content">Упоминаний в заголовках: <span class="news__content-span">235</span></p>
+            </div>
+        </section>
+        <section class="histogram">
+            <div class="histogram__container">
+                <h3 class="histogram__title">Аналитика по дням</h3>
+                <div class="histogram__content">
+                    <div class="histogram__head">
+                        <p class="histogram__name-column">Дата<span class="histogram__name-column-span">(Август)</span></p>
+                        <p class="histogram__name-column">Кол-во упоминаний</p>
+                    </div>
+                    <div class="histogram__x-axis">
+                        <p class="histogram__x-axis-day">0</p>
+                        <p class="histogram__x-axis-day">25</p>
+                        <p class="histogram__x-axis-day">50</p>
+                        <p class="histogram__x-axis-day">75</p>
+                        <p class="histogram__x-axis-day">100</p>
+                    </div>
+                    <div class="histogram__area">
+                        <div class="histogram__column-date">
+                            <p  class="histogram__date">19, пн</p>
+                            <p  class="histogram__date">20, вт</p>
+                            <p  class="histogram__date">21, ср</p>
+                            <p class="histogram__date">22, чт</p>
+                            <p class="histogram__date">23, пт</p>
+                            <p class="histogram__date">24, сб</p>
+                            <p class="histogram__date">25, вс</p>
+                        </div>
+                        <div class="histogram__column-line">
+                            <div class="histogram__column-hist histogram__column-hist_1">
+                                <p class="histogram__column-hist-text histogram__column-hist-text_1">15</p>
+                            </div>
+                            <div class="histogram__column-hist histogram__column-hist_2">
+                                <p class="histogram__column-hist-text histogram__column-hist-text_2">18</p>
+                            </div>
+                            <div class="histogram__column-hist histogram__column-hist_3">
+                                <p class="histogram__column-hist-text histogram__column-hist-text_3">11</p>
+                            </div>
+                            <div class="histogram__column-hist histogram__column-hist_4">
+                                <p class="histogram__column-hist-text histogram__column-hist-text_4">39</p>
+                            </div>
+                            <div class="histogram__column-hist histogram__column-hist_5">
+                                <p class="histogram__column-hist-text histogram__column-hist-text_5">45</p>
+                            </div>
+                            <div class="histogram__column-hist histogram__column-hist_6">
+                                <p class="histogram__column-hist-text histogram__column-hist-text_6">73</p>
+                            </div>
+                            <div class="histogram__column-hist histogram__column-hist_7">
+                                <p class="histogram__column-hist-text histogram__column-hist-text_7">34</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="histogram__x-axis">
+                        <p class="histogram__x-axis-day">0</p>
+                        <p class="histogram__x-axis-day">25</p>
+                        <p class="histogram__x-axis-day">50</p>
+                        <p class="histogram__x-axis-day">75</p>
+                        <p class="histogram__x-axis-day">100</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p class="footer__copyright">&#169; 2019 Арзамасцев Роман</p>
+            <nav class="footer__menu">
+                <ul class="footer__menu-ul">
+                    <li class="footer__menu-li"><a href="index.html" class="footer__menu-link">Главная</a></li>
+                    <li class="footer__menu-li"><a href="about.html" class="footer__menu-link">О проекте</a></li>
+                    <li class="footer__menu-li"><a href="https://praktikum.yandex.ru/" target="_blank" class="footer__menu-link">Яндекс.Практикум</a></li>
+                </ul>
+            </nav>
+            <div class="footer__container-icon">
+                <a href="https://github.com/" target="_blank" class="footer__link"><img src="<%=require('./images/github.png')%>" alt="icon github" class="footer__icon"></a>
+                <a href="https://www.facebook.com/" target="_blank" class="footer__link"><img src="<%=require('./images/facebook.png')%>" alt="icon facebook" class="footer__icon"></a> 
+            </div>
+        </footer>
+    </main>
+    <script src = "<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+</body>
+</html>

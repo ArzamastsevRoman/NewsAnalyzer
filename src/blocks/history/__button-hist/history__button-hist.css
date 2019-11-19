@@ -1,0 +1,37 @@
+.history__button-hist {
+    margin: 24px 16px 32px;
+    height: 56px;
+    background-color: #f5f6f7;
+    border: 1px solid #1a1b22;
+    border-radius: 80px;
+    width: calc(100% - 32px);
+    font-family: 'roboto-regular', sans-serif;
+    font-weight: 100;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #1a1b22;
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.history__button-hist:hover {
+    background: rgba(255, 255, 255, .6);
+}
+
+.history__button-hist:active,
+.history__button-hist:focus {
+    opacity: 0.9;
+    cursor: pointer;
+    outline: aqua;
+    border: 1px solid aqua;
+    border-radius: 100px;
+    background: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 767px) {
+    .history__button-hist {
+        display: none;
+    }
+}

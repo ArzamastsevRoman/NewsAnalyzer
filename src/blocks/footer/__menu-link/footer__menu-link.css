@@ -1,0 +1,17 @@
+.footer__menu-link {
+    text-decoration: none;
+    font-family: roboto-regular, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #1a1b22;
+}
+
+.footer__menu-link:active {
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+    .footer__menu-link {
+        line-height: 3rem;
+    }
+}

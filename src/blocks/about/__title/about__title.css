@@ -1,0 +1,15 @@
+.about__title {
+    margin: 0 0 24px;
+    font-family: robotoslab, serif;
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+    color: #1a1b22;
+}
+
+@media screen and (max-width: 850px) {
+    .about__title {
+        margin: 0 0 16px;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+    }
+}

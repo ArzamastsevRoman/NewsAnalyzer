@@ -1,0 +1,13 @@
+.histogram__column-line {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: calc(100% - 104px);
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .histogram__column-line {
+        margin: 0 0 0 13px;
+        width: calc(100% - 117px);
+    }
+}

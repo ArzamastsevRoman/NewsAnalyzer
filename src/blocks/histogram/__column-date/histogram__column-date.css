@@ -1,0 +1,12 @@
+.histogram__column-date {
+    display: flex;
+    flex-direction: column;
+    width: 104px;
+    
+}
+
+@media screen and (max-width: 767px) {
+    .histogram__column-date {
+        width: 64px;
+    }
+}

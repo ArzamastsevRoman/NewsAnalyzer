@@ -1,0 +1,86 @@
+.glide__arrow {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    z-index: 2;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    transform: translateY(-50%);
+    line-height: 1; 
+    border-radius: 40px;
+    background-color: #1a1b22;
+  }
+
+  @media screen and (max-width: 850px) {
+    .glide__arrow {
+        display: none;
+    }
+}
+
+    .glide__arrow:focus {
+      outline: none; }
+    /* .glide__arrow:hover {
+       border-color: white; }  */
+    .glide__arrow--left {
+      background-image: url(../../images/slider-control-left.png);
+      background-position-y: -8px;
+      background-position-x: -12px;
+      padding: 0;
+      left: 2em; }
+    .glide__arrow--right {
+      background-image: url(../../images/slider-control-right.png);
+      background-position-y: -8px;
+      background-position-x: -10px;
+        padding: 0;
+        right: 2em; }
+    .glide__arrow--disabled {
+
+        opacity: 0.33; }
+
+  .glide__bullets {
+    position: absolute;
+    bottom: -56px;
+    left: 50%;
+    z-index: 2;
+    display: inline-flex;
+    list-style: none;
+    transform: translateX(-50%); }
+
+    @media screen and (max-width: 767px) {
+      .glide__bullets {
+        bottom: -24px;
+      }
+    }
+
+  .glide__bullet {
+     background-color: #d1d2d6; /*rgba(255, 255, 255, 0.5) */
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    line-height: 0;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+    margin: 0 0.25em; }
+    .glide__bullet:focus {
+      outline: none; }
+    .glide__bullet:hover, .glide__bullet:focus {
+      border: 2px solid #1a1b22;
+      background-color: #1a1b22; }
+    .glide__bullet--active {
+      background-color: #1a1b22; }
+
+  .glide--swipeable {
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab; }
+
+  .glide--dragging {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing; }
