@@ -6,67 +6,48 @@ export default class CardList {
         this.array = array;
 
         this.render = this.render.bind(this);
+        this.check = this.check.bind(this);
         this.button = document.querySelector('.result__button');
+        
+        
         this.button
-            .addEventListener('click', this.render());
+            .addEventListener('click', this.render);
+
+        this.button
+            .addEventListener('click', this.check);
+        
+        this.arr=['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'ноября', 'декабря'];
+
+        this.diactivatedButton = this.diactivatedButton.bind(this);
+        this.button
+            .addEventListener('click', this.diactivatedButton);
     }
 
-    render() {
-        for (let i = 0; i <= 2; i++) {
-			const { resultCard } = new Card(this.array[i].urlToImage, this.array[i].publishedAt, this.array[i].title, this.array[i].content, this.array[i].url, this.array[i].source.name);
-            this.container.appendChild(resultCard);
+    check() {
+        if (this.array.length >= 3) {
+            this.array.splice(0,3);
+        } else if (this.array.length === 2) {
+            this.array.splice(0,2);
+        } else if (this.array.length === 1) {
+            this.array.splice(0,1);
         }
     }
-}
 
-/*
-export default class CardList {
-	constructor (container, array) {
-		this.container = container;
-		this.array = array;
-		this.render();
-		this.popupForm = document.querySelector('.popup__form');
-		this.popupButton = document.querySelector('.button');
-		this.popup = document.querySelector('.popup');
-		this.popupAddButton = this.popupForm.querySelector('button');
-		this.popupInputName = this.popupForm.elements.name;
-		this.popupInputUrl = this.popupForm.elements.link;
+    render(a) {
+        for (let i = 0; i <= 2; i++) {
+            let date = new Date(this.array[i].publishedAt);
+            let month = this.arr[date.getMonth()-1];
+            
+			const { resultCard } = new Card(this.array[i].urlToImage, `${date.getDate()} ${month}, ${date.getFullYear()}`, this.array[i].title, this.array[i].description, this.array[i].url, this.array[i].source.name);
+            this.container.appendChild(resultCard);
+            
+        }
+    }
 
-		this.addCard = this.addCard.bind(this);
-		this.render = this.render.bind(this);
-		this.diactivatedAddButton = this.diactivatedAddButton.bind(this);
-
-		this.popupForm.addEventListener('submit', this.addCard);
-		this.popupButton.addEventListener('click', this.diactivatedAddButton);
-		this.popupForm.addEventListener('input', this.diactivatedAddButton);
-		
-	}
-
-	addCard (e) {
-		e.preventDefault();
-		const {placeCard} = new Card(this.popupForm.elements.name.value, this.popupForm.elements.link.value);
-		
-		this.container.appendChild(placeCard);
-		this.popup.classList.remove('popup_is-opened');
-		this.popupForm.reset();
-	}
-
-  	diactivatedAddButton () {
-		if (!this.popupInputName.checkValidity() || !this.popupInputUrl.checkValidity()) {
-	  			this.popupAddButton.setAttribute('disable', true);
-	  			this.popupAddButton.classList.add('popup__button_disable');
-	  			this.popupAddButton.classList.remove('popup__button');
-		} else {
-	  			this.popupAddButton.removeAttribute('disabled');
-	  			this.popupAddButton.classList.remove('popup__button_disable');
-	  			this.popupAddButton.classList.add('popup__button');
-		}
+    diactivatedButton () {
+        if (this.array.length === 0) {
+            this.button.setAttribute('style', 'display: none');
+            this.container.setAttribute('style', 'margin-bottom: 64px;')
+        }
   	}
-	
-	render () {
-		for (let i = 0; i < this.array.length; i++) {
-			const { placeCard } = new Card(this.array[i].name, this.array[i].link);
-			this.container.appendChild(placeCard);
-		}
-	}
-}*/
+}

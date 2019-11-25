@@ -52,3 +52,7 @@ const glide = new Glide('.glide', {
 
 glide.mount();
 
+import GithubHistory from './github-history/github-history'
+
+const githubHistory = new GithubHistory ('https://api.github.com/ArzamastsevRoman/NewsAnalyzer/commits', '')
+githubHistory.getHistory();

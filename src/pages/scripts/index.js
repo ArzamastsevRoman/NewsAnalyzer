@@ -14,28 +14,14 @@ import '../../blocks/visually-hidden/visually-hidden.css'
 import Validate from './validate/validate'
 
 const input = document.querySelector('.search__input');
+const contentInput = document.querySelector('.search__content-input');
 
-const validate = new Validate (input);
-
-import News from './news/news'
+const validate = new Validate (contentInput);
 
 const button = document.querySelector('.search__button');
+
+import Input from './input/input'
+
 button.addEventListener('click', () => {
-    //console.log(input.value);
-    const news = new News ('https://newsapi.org/v2/everything', '8c6a0a5107914e788d6cfa5136d5282e', input.value);
-    news.getNews();
+    const request = new Input (input.value);
 })
-
-//console.log(JSON.parse(localStorage.getItem(1)));
-
-import CardList from './cardList/cardList'
-
-const resultContent = document.querySelector('.result__content')
-
-let array = [];
-
-for (let i=0; i<localStorage.length; i++) {
-    array.push(JSON.parse(localStorage.getItem(i)));
-}
-
-const cardList = new CardList (resultContent, array);

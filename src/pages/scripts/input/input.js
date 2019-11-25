@@ -1,14 +1,19 @@
 import News from "../news/news";
+export let array = [];
 
 export default class Input {
-    constructor (container) {
-        this.container = container;
-        this.value = this.container.value;
+    constructor (value) {
+        this.value = value;
+        this.addNews = this.addNews.bind(this);
 
-        this.click = this.click.bind(this);
+        this.addNews();
     }
 
-    click () {
-        const news = new News ('https://newsapi.org/v2/everything', '8c6a0a5107914e788d6cfa5136d5282e', this.container.value);
+    addNews () {
+        const news = new News ('https://newsapi.org/v2/', '8c6a0a5107914e788d6cfa5136d5282e', this.value);
+        news.getNews();
+        news.getNewsEverything();
+        news.getNewsHeadlines();
+        
     }
 }
