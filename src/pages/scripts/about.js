@@ -8,7 +8,7 @@ import '../../blocks/footer/footer.css'
 import '../../blocks/about/about.css'
 import '../../blocks/tech/tech.css'
 import '../../blocks/history/history.css'
-
+/*
 import Glide from '@glidejs/glide'
 
 import '../../blocks/glide/glide.theme.css'
@@ -51,8 +51,9 @@ const glide = new Glide('.glide', {
 })
 
 glide.mount();
+*/
 
 import GithubHistory from './github-history/github-history'
 
-const githubHistory = new GithubHistory ('https://api.github.com/ArzamastsevRoman/NewsAnalyzer/commits', '')
+const githubHistory = new GithubHistory ('https://api.github.com/repos/ArzamastsevRoman/NewsAnalyzer/commits','59bd353dfcd2fb2842cbc8c8861d0e767374a5c5');
 githubHistory.getHistory();
