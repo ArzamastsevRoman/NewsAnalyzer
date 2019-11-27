@@ -8,7 +8,7 @@
     <link rel="icon" href="./images/favicon.png">
     <meta name="description" content="сервис для анализа происходящих в мире событий">
     <meta name="author" content="Арзамасцев Роман">
-    <link rel="stylesheet" href="./main/main.6e4d1039f7978a5ef947.css">
+    <link rel="stylesheet" href="./main/main.31a153d277cfe80ca7e8.css">
 </head>
 <body>
     <main class="main">
@@ -25,7 +25,8 @@
             <h1 class="search__title">Что в мире творится?</h1>
             <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
             <div class="search__content-input">
-                <input type="text" class='search__input' placeholder="Введите тему новости" required>
+                <input type="text" required minlength = '2' maxlength = '30' class='search__input' placeholder="Введите тему новости" required>
+                <span id = "error" class="search__error" aria-live = 'polite'></span>
                 <button class='search__button'>Искать</button>
             </div>    
         </div>
@@ -44,7 +45,9 @@
                 <h2 class="result__title">Результаты поиска</h2>
                 <a href="./analytics.html" class="result__link">Посмотреть аналитику <img src="./images/Path_5.png" alt="arrow right"></a>
             </div>
+            <p class="result__error">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</p>
             <div class="result__content">
+                <!--
                 <div class="result__card">
                     <img src="./images/card-image.png" alt="image card" class="result__card-image">
                     <p class="result__card-data">2 августа, 2019</p>
@@ -86,7 +89,7 @@
                     <h3 class="result__card-title">Национальное достояние - парки</h3>
                     <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
                     <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
-                </div>
+                </div>-->
             </div>
             <button class="result__button">Показать ещё</button>
         </section>
@@ -118,6 +121,6 @@
             </div>
         </footer>
     </main>
-    <script src = "./main/main.ba7223f4042c3a7859e1.js"></script>
+    <script src = "./main/main.681095c47db2496f90e3.js"></script>
 </body>
 </html>
