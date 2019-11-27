@@ -63,6 +63,8 @@ export default class News {
                 for (let i=0; i<data.articles.length; i++) {
                     sessionStorage.setItem([i], JSON.stringify(data.articles[i]));
                     //console.log(sessionStorage.getItem(i));
+                    //console.log(`${this.year}-${this.month}-${this.day}`);
+                    //console.log(`${this.dateYear}-${this.dateMonth}-${this.dateDay}`);
                 }
                 for (let i=0; i<sessionStorage.length; i++) {
                     array.push(JSON.parse(sessionStorage.getItem(i)));
