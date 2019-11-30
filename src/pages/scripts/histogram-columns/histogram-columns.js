@@ -29,15 +29,11 @@ export default class HistogramColumns {
         this.month = this.container.querySelector('.histogram__name-column-span');
         
         this.addContent = this.addContent.bind(this);
+
+        this.dayColumn = this.dayColumn.bind(this);
     }
 
     addContent() {
-        /*
-        for (let i=0; i<=7; i++) {
-            `this.column${i}` = this.container.querySelector(`.histogram__column-hist_${i}`);
-            `this.column${i}`.setAttribute('style', `width: ${localStorage.getItem(`date${6-i}`)}%`);
-        };
-        */
         
         this.column1.setAttribute('style', `width: ${localStorage.getItem('date6')}%`);
         this.column2.setAttribute('style', `width: ${localStorage.getItem('date5')}%`);
@@ -69,5 +65,22 @@ export default class HistogramColumns {
 
     addMonth() {
         this.month.textContent = localStorage.getItem('month')
+    }
+
+    dayColumn() {
+        const dateColumn = new Date();
+        const dayOfTheWeek = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+        const arrMonth = ['ЯНВАРЬ', 'ФЕВРАЛЬ', 'МАРТ', 'АПРЕЛЬ', 'МАЙ', 'ИЮНЬ', 'ИЮЛЬ', 'АВГУСТ', 'СЕНТЯБРЬ', 'НОЯБРЬ', 'ДЕКАБРЬ'];
+        let dayWeek = dayOfTheWeek[dateColumn.getDay()];
+        const month = arrMonth[dateColumn.getMonth()-1];
+
+        localStorage.setItem(`month`, `(${month})`);
+        localStorage.setItem(`dateColumn0`, `${dateColumn.getDate()}, ${dayWeek}`);
+
+        for(let i=1; i<7; i++) {
+            dateColumn.setDate(dateColumn.getDate() - 1);
+            dayWeek = dayOfTheWeek[dateColumn.getDay()];
+            localStorage.setItem(`dateColumn${i}`, `${dateColumn.getDate()}, ${dayWeek}`);
+        }
     }
 }

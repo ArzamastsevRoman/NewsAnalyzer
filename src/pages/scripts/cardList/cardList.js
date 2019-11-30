@@ -21,6 +21,8 @@ export default class CardList {
         this.diactivatedButton = this.diactivatedButton.bind(this);
         this.button
             .addEventListener('click', this.diactivatedButton);
+        
+        this.delete = this.delete.bind(this);
     }
 
     check() {
@@ -33,14 +35,21 @@ export default class CardList {
         }
     }
 
-    render(a) {
+    render() {
         for (let i = 0; i <= 2; i++) {
-            let date = new Date(this.array[i].publishedAt);
-            let month = this.arr[date.getMonth()-1];
+            const date = new Date(this.array[i].publishedAt);
+            const month = this.arr[date.getMonth()-1];
             
 			const { resultCard } = new Card(this.array[i].urlToImage, `${date.getDate()} ${month}, ${date.getFullYear()}`, this.array[i].title, this.array[i].description, this.array[i].url, this.array[i].source.name);
             this.container.appendChild(resultCard);
-            
+            this.resultCard = resultCard;
+        }
+    }
+
+    delete() {
+        var element = document.querySelector(".result__content");
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
         }
     }
 
