@@ -24,6 +24,7 @@ export default class GithubHistory {
             return Promise.reject(res.status);
 
         })
+        /*
         .then((data) => {
             for (let i=0; i<data.length; i++) {
                 const date = new Date (data[i].commit.committer.date);
@@ -35,6 +36,7 @@ export default class GithubHistory {
         .then(() => {
             const glide = new GlideSlider();
         })
+        */
 		.catch(err => { 
 			console.log(err); 
         });

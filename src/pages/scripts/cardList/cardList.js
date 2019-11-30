@@ -10,8 +10,8 @@ export default class CardList {
         this.button = document.querySelector('.result__button');
         
         
-        this.button
-            .addEventListener('click', this.render);
+        this.button.onclick = this.render
+            //.addEventListener('click', this.render);
 
         this.button
             .addEventListener('click', this.check);

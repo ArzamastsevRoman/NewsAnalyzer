@@ -10,6 +10,7 @@
 @import url(./__card-link/result__card-link.css);
 @import url(./__card-title/result__card-title.css);
 @import url(./__error/result__error.css);
+@import url(./__card-title-link/result__card-title-link.css);
 
 .result {
     max-width: 1440px;

@@ -31,25 +31,30 @@ export default class HistogramColumns {
         this.addContent = this.addContent.bind(this);
 
         this.dayColumn = this.dayColumn.bind(this);
+
+        this.columnDay = this.columnDay.bind(this);
+        this.columnDay();
+
+        
     }
 
     addContent() {
         
-        this.column1.setAttribute('style', `width: ${localStorage.getItem('date6')}%`);
-        this.column2.setAttribute('style', `width: ${localStorage.getItem('date5')}%`);
-        this.column3.setAttribute('style', `width: ${localStorage.getItem('date4')}%`);
-        this.column4.setAttribute('style', `width: ${localStorage.getItem('date3')}%`);
-        this.column5.setAttribute('style', `width: ${localStorage.getItem('date2')}%`);
-        this.column6.setAttribute('style', `width: ${localStorage.getItem('date1')}%`);
-        this.column7.setAttribute('style', `width: ${localStorage.getItem('date0')}%`);
+        this.column1.setAttribute('style', `width: ${localStorage.getItem('ResultColumn6')}%`);
+        this.column2.setAttribute('style', `width: ${localStorage.getItem('ResultColumn5')}%`);
+        this.column3.setAttribute('style', `width: ${localStorage.getItem('ResultColumn4')}%`);
+        this.column4.setAttribute('style', `width: ${localStorage.getItem('ResultColumn3')}%`);
+        this.column5.setAttribute('style', `width: ${localStorage.getItem('ResultColumn2')}%`);
+        this.column6.setAttribute('style', `width: ${localStorage.getItem('ResultColumn1')}%`);
+        this.column7.setAttribute('style', `width: ${localStorage.getItem('ResultColumn0')}%`);
 
-        this.columnText1.textContent = localStorage.getItem('date6');
-        this.columntext2.textContent = localStorage.getItem('date5');
-        this.columntext3.textContent = localStorage.getItem('date4');
-        this.columntext4.textContent = localStorage.getItem('date3');
-        this.columntext5.textContent = localStorage.getItem('date2');
-        this.columntext6.textContent = localStorage.getItem('date1');
-        this.columntext7.textContent = localStorage.getItem('date0');
+        this.columnText1.textContent = localStorage.getItem('ResultColumn6');
+        this.columntext2.textContent = localStorage.getItem('ResultColumn5');
+        this.columntext3.textContent = localStorage.getItem('ResultColumn4');
+        this.columntext4.textContent = localStorage.getItem('ResultColumn3');
+        this.columntext5.textContent = localStorage.getItem('ResultColumn2');
+        this.columntext6.textContent = localStorage.getItem('ResultColumn1');
+        this.columntext7.textContent = localStorage.getItem('ResultColumn0');
         
     }
 
@@ -81,6 +86,40 @@ export default class HistogramColumns {
             dateColumn.setDate(dateColumn.getDate() - 1);
             dayWeek = dayOfTheWeek[dateColumn.getDay()];
             localStorage.setItem(`dateColumn${i}`, `${dateColumn.getDate()}, ${dayWeek}`);
+        }
+    }
+
+    columnDay() {
+        let arrayColumn = [];
+        for (let i=0; i<localStorage.length; i++) {
+            if (localStorage.getItem(i)) {
+                arrayColumn.push(JSON.parse(localStorage.getItem(i)));
+            }
+        }
+        const today = new Date();
+        arrayColumn.forEach(item => {
+            item.publishedAt = new Date(item.publishedAt.substring(0, 10)).getDate();
+        })
+        const stingHistogram = 7;
+        for(let i=0; i<stingHistogram; i++) {
+            const dateCheck = today.getDate() - i;
+            const arrDay = arrayColumn.filter(item => {
+                return item.publishedAt % dateCheck === 0;
+            });
+            let resultTitle=0;
+            for(let i=0; i<arrDay.length; i++) {
+                if (arrDay[i].title.toUpperCase().indexOf(`${localStorage.getItem('request')}`.toUpperCase()) > 0) {
+                    resultTitle = resultTitle + 1; 
+                }
+            }
+            let resultDescription=0;
+            for(let i=0; i<arrDay.length; i++) {
+                if (arrDay[i].description.toUpperCase().indexOf(`${localStorage.getItem('request')}`.toUpperCase()) > 0) {
+                    resultDescription = resultDescription + 1; 
+                }
+            }
+            let res = resultTitle + resultDescription;
+            localStorage.setItem(`ResultColumn${i}`, res);
         }
     }
 }

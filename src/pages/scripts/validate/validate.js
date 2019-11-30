@@ -11,7 +11,10 @@ export default class Validate {
 		this.input
             .addEventListener('click', this.inputValidate);
         this.input
-		    .addEventListener('input', this.inputValidate);
+			.addEventListener('input', this.inputValidate);
+
+		this.diactivatedButton = this.diactivatedButton.bind(this);
+		this.activatedButton = this.activatedButton.bind(this);
 	}
 
 	inputValidate(e) {
@@ -23,11 +26,21 @@ export default class Validate {
 		
 		if (element.validity.tooShort) {
 			errorElement.textContent = 'Должно быть от 2 до 30 символов';
-		  } else if (element.validity.valueMissing) {
+			this.diactivatedButton();
+		} else if (element.validity.valueMissing) {
 			errorElement.textContent = 'Нужно ввести ключевое слово';
-		  } else {
+			this.diactivatedButton();
+		} else {
 			errorElement.textContent = '';
-		  }
+			this.activatedButton();
+		}
 	}
+
+	diactivatedButton () {
+            this.button.setAttribute('disabled', true);
+  	}
 	
+	activatedButton () {
+		this.button.removeAttribute('disabled');
+  	}
 }

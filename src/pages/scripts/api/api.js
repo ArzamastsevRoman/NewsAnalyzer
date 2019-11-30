@@ -1,4 +1,3 @@
-//export let array = [];
 import {preloader, result, notFound, error} from '../index'
 
 export default class Api {
@@ -13,8 +12,6 @@ export default class Api {
         this.result = document.querySelector('.result');
         this.notFound = document.querySelector('.not-found');
         this.error = document.querySelector('.result__error');
-
-        this.newsFilter = this.newsFilter.bind(this);
     }
 
     _constructUrl() {
@@ -51,41 +48,25 @@ export default class Api {
         for (let i=0; i<arr.length; i++) {
             localStorage.setItem([i], JSON.stringify(arr[i]));
         }
-        /*
-        array = [];
-        for (let i=0; i<localStorage.length; i++) {
-            array.push(JSON.parse(localStorage.getItem(i)));
-        }
-        */
     }
 
-    
-
-    newsFilter(arr) {
-        
-        arr.forEach(item => {
-            item.publishedAt = new Date(item.publishedAt.substring(0, 10)).getDate();
-        })
-        //console.log(arr);
-
-        for(let i=0; i<7; i++) {
-
-            const dateCheck = this.day - i;
-
-            const arrDay = arr.filter(item => {
-                return item.publishedAt % dateCheck === 0;
-            });
-
-            localStorage.setItem(`date${i}`, `${arrDay.length}`);
+    resultTitle (arr) {
+        let resultTitle=0;
+        for (let i=0; i<arr.length; i++) {
+            if (arr[i].title.toUpperCase().indexOf(`${localStorage.getItem('request')}`.toUpperCase()) > 0) {
+                resultTitle = resultTitle + 1; 
+            }
         }
-        //console.log(arr);
+        localStorage.setItem('resultTitle', resultTitle);
     }
 
-    
-
-    getCommits () {
-        return fetch(`${this.url}everything?q=${this.request}&apiKey=${this.token}&from=${this.from}&to=${this.to}&pageSize=100&sortBy=publishedAt&language=ru`, {
-            method: 'GET'
+    getCommits (url, token) {
+        return fetch(`${url}`, {
+            method: 'GET',
+            headers: {
+                authorization: `${token}`,
+                'Content-Type': 'application/json'
+            }
         })
         .then(res => {
 			if(res.ok) {

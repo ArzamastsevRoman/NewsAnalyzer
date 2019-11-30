@@ -1,0 +1,30 @@
+.result__card-title-link {
+    font-family: roboto-regular, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #1a1b22;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.result__card-title-link:active {
+    opacity: 0.9;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .result__card-title-link {
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .result__card-title-link {
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+    }
+}
