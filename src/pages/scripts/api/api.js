@@ -3,8 +3,8 @@ import {preloader, result, notFound, error} from '../index'
 export default class Api {
     constructor (url, token, options) {
         this.options = options;
-        this.url = url;
-        this.token = token;
+        this._url = url;
+        this._token = token;
 
         this.getNews = this.getNews.bind(this);
 
@@ -14,25 +14,24 @@ export default class Api {
         this.error = document.querySelector('.result__error');
     }
 
-    _constructUrl() {
-        return Object.values(this.options).reduce((url, item) => url + item)
-    }
-
     getNews (request, from, to) {
-        return fetch(`${this.url}?q=${request}&apiKey=${this.token}&from=${from}&to=${to}&pageSize=100&sortBy=publishedAt&language=ru`, {
+        return fetch(`${this._url}?q=${request}&apiKey=${this._token}&from=${from}&to=${to}&pageSize=100&sortBy=publishedAt&language=ru`, {
             method: 'GET'
         })
         .then(res => {
-            
+            document.querySelector('.search__input').setAttribute('disabled', true);
             result.setAttribute('style', 'display: flex'); 
             preloader.setAttribute('style', 'display: block');
 
 			if(res.ok) {
+                document.querySelector('.search__input').removeAttribute('disabled');
                 notFound.setAttribute('style', 'display: none');
                 preloader.setAttribute('style', 'display: none');
                 return res.json();
             } else {
                 error.setAttribute('style', 'display: block'); 
+                alert(`${err}: ${err.status}`);
+        
             }
 
             notFound.setAttribute('style', 'display: flex');
@@ -40,7 +39,7 @@ export default class Api {
 
         })
 		.catch(err => { 
-			console.log(`${err}: ${res.status}`); 
+			console.log(`${err}: ${err.status}`); 
         });
     }
 

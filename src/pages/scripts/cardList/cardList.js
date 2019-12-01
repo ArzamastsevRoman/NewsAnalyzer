@@ -10,8 +10,8 @@ export default class CardList {
         this.button = document.querySelector('.result__button');
         
         
-        this.button.onclick = this.render
-            //.addEventListener('click', this.render);
+        this.button.onclick = this.render;
+            
 
         this.button
             .addEventListener('click', this.check);
@@ -32,7 +32,7 @@ export default class CardList {
             this.array.splice(0,2);
         } else if (this.array.length === 1) {
             this.array.splice(0,1);
-        }
+        } 
     }
 
     render() {
@@ -47,7 +47,7 @@ export default class CardList {
     }
 
     delete() {
-        var element = document.querySelector(".result__content");
+        const element = document.querySelector(".result__content");
         while (element.firstChild) {
             element.removeChild(element.firstChild);
         }
@@ -57,6 +57,7 @@ export default class CardList {
         if (this.array.length === 0) {
             this.button.setAttribute('style', 'display: none');
             this.container.setAttribute('style', 'margin-bottom: 64px;')
+            this.button.removeEventListener('click', this.diactivatedButton);
         }
   	}
 }

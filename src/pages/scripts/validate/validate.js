@@ -37,7 +37,7 @@ export default class Validate {
 	}
 
 	diactivatedButton () {
-            this.button.setAttribute('disabled', true);
+        this.button.setAttribute('disabled', true);
   	}
 	
 	activatedButton () {

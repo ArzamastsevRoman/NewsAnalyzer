@@ -29,8 +29,11 @@ const date = new Date();
 const dayPrevious = 7;
 date.setDate(today.getDate() - dayPrevious);
 const from = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+const urlNews = 'https://newsapi.org/v2/everything';
+const tokenNews = '8c6a0a5107914e788d6cfa5136d5282e';
 
-const apiNews = new Api ('https://newsapi.org/v2/everything', '8c6a0a5107914e788d6cfa5136d5282e');
+
+const apiNews = new Api (urlNews, tokenNews);
 
 const preloader = document.querySelector('.preloader');
 const result = document.querySelector('.result');
@@ -44,7 +47,6 @@ const resultContent = document.querySelector('.result__content');
 
 function createCard (arr) {
     input.value = localStorage.getItem('request');
-    console.log(arr);
     result.setAttribute('style', 'display: flex'); 
     const startCardList = new CardList (resultContent, arr);
     startCardList.delete();
@@ -55,7 +57,9 @@ function createCard (arr) {
 
 let arrayStart = [];
 for (let i=0; i<localStorage.length; i++) {
-    arrayStart.push(JSON.parse(localStorage.getItem(i)));
+    if (localStorage.getItem(i)) {
+        arrayStart.push(JSON.parse(localStorage.getItem(i)));
+    }
 }
 
 button.addEventListener('click', () => {
@@ -67,7 +71,7 @@ button.addEventListener('click', () => {
                 result.setAttribute('style', 'display: none');
                 preloader.setAttribute('style', 'display: none');
                 localStorage.clear();
-            } else {
+            } else if (data.articles.length>0) {
                 localStorage.clear();
                 localStorage.setItem('resultEver', data.totalResults);
                 localStorage.setItem('request', input.value);
@@ -75,14 +79,20 @@ button.addEventListener('click', () => {
                 apiNews.resultTitle(data.articles);
                 arrayStart = []; 
                 for (let i=0; i<localStorage.length; i++) {
-                    arrayStart.push(JSON.parse(localStorage.getItem(i)));
-                }   
-                //localStorage.setItem('array', arrayStart);
-                //console.log(arrayStart);
+                    if (localStorage.getItem(i)) {
+                        arrayStart.push(JSON.parse(localStorage.getItem(i)));
+                    }
+                } 
+                console.log(arrayStart);
                 createCard(arrayStart);
+            } else {
+                error.setAttribute('style', 'display: block'); 
+                alert(`${err}: ${err.status}`);
+        
             }
         });
 })
+
 if (localStorage.getItem('resultEver')){
     createCard(arrayStart);
 }
