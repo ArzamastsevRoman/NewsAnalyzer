@@ -22,8 +22,5 @@ export default class GithubHistory {
             return Promise.reject(res.status);
 
         })
-		.catch(err => { 
-			console.log(err); 
-        });
     }
 }

@@ -100,12 +100,15 @@ export default class HistogramColumns {
         arrayColumn.forEach(item => {
             item.publishedAt = new Date(item.publishedAt.substring(0, 10)).getDate();
         })
+        console.log(arrayColumn)
         const stingHistogram = 7;
         for(let i=0; i<stingHistogram; i++) {
-            const dateCheck = today.getDate() - i;
+            today.setDate(today.getDate() - 1);
             const arrDay = arrayColumn.filter(item => {
-                return item.publishedAt % dateCheck === 0;
+                console.log(`dateCheck ${today.getDate()}`)
+                return item.publishedAt % today.getDate() === 0;
             });
+            console.log(arrDay)
             let resultTitle=0;
             for(let i=0; i<arrDay.length; i++) {
                 if (arrDay[i].title.toUpperCase().indexOf(`${localStorage.getItem('request')}`.toUpperCase()) > 0) {
@@ -119,6 +122,7 @@ export default class HistogramColumns {
                 }
             }
             let res = resultTitle + resultDescription;
+            console.log(res)
             localStorage.setItem(`ResultColumn${i}`, res);
         }
     }

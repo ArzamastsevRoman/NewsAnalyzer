@@ -38,9 +38,6 @@ export default class Api {
             return Promise.reject(res);
 
         })
-		.catch(err => { 
-			console.log(`${err}: ${err.status}`); 
-        });
     }
 
     addNewsLocalStorage (arr) {
@@ -57,25 +54,5 @@ export default class Api {
             }
         }
         localStorage.setItem('resultTitle', resultTitle);
-    }
-
-    getCommits (url, token) {
-        return fetch(`${url}`, {
-            method: 'GET',
-            headers: {
-                authorization: `${token}`,
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(res => {
-			if(res.ok) {
-                return res.json();
-            }
-            return Promise.reject(`Ошибка: ${res.status}`);
-
-        })
-		.catch(err => { 
-			console.log(`${err}: ${res.status}`); 
-        });
     }
 }

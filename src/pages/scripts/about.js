@@ -9,11 +9,12 @@ import '../../blocks/about/about.css'
 import '../../blocks/tech/tech.css'
 import '../../blocks/history/history.css'
 
-const arr=['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'ноября', 'декабря'];
-
 import GithubHistory from './github-history/github-history'
 import HistoryCard from './history-card/history-card'
 import GlideSlider from './glide/glide'
+
+const arr=['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'ноября', 'декабря'];
+
 const urlGithubHistory = 'https://api.github.com/repos/ArzamastsevRoman/NewsAnalyzer/commits';
 const tokenGithub = '59bd353dfcd2fb2842cbc8c8861d0e767374a5c5';
 
@@ -30,4 +31,7 @@ githubHistory.getHistory()
     })
     .then(() => {
         const glide = new GlideSlider();
-    });
+    })
+    .catch(err => { 
+        console.log(`${err}: ${res.status}`); 
+    });;

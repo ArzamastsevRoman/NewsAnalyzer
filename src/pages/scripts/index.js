@@ -90,7 +90,10 @@ button.addEventListener('click', () => {
                 alert(`${err}: ${err.status}`);
         
             }
-        });
+        })
+		.catch(err => { 
+			console.log(`${err}: ${err.status}`); 
+        });;
 })
 
 if (localStorage.getItem('resultEver')){
