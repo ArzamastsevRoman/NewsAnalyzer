@@ -1,6 +1,3 @@
-import HistoryCard from '../history-card/history-card'
-import GlideSlider from '../glide/glide'
-
 export default class GithubHistory {
     constructor (url, token) {
         this._url = url;

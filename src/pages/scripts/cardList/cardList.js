@@ -21,8 +21,6 @@ export default class CardList {
         this.diactivatedButton = this.diactivatedButton.bind(this);
         this.button
             .addEventListener('click', this.diactivatedButton);
-        
-        this.delete = this.delete.bind(this);
     }
 
     check() {
@@ -36,14 +34,36 @@ export default class CardList {
     }
 
     render() {
-        for (let i = 0; i <= 2; i++) {
-            const date = new Date(this.array[i].publishedAt);
-            const month = this.arr[date.getMonth()-1];
-            
-			const { resultCard } = new Card(this.array[i].urlToImage, `${date.getDate()} ${month}, ${date.getFullYear()}`, this.array[i].title, this.array[i].description, this.array[i].url, this.array[i].source.name);
-            this.container.appendChild(resultCard);
-            this.resultCard = resultCard;
+        if (this.array.length > 3) {
+            for (let i = 0; i <= 2; i++) {
+                const date = new Date(this.array[i].publishedAt);
+                const month = this.arr[date.getMonth()-1];
+                
+                const { resultCard } = new Card(this.array[i].urlToImage, `${date.getDate()} ${month}, ${date.getFullYear()}`, this.array[i].title, this.array[i].description, this.array[i].url, this.array[i].source.name);
+                this.container.appendChild(resultCard);
+                this.resultCard = resultCard;
+            }
+        } else if (this.array.length === 2) {
+            for (let i = 0; i <= 1; i++) {
+                const date = new Date(this.array[i].publishedAt);
+                const month = this.arr[date.getMonth()-1];
+                
+                const { resultCard } = new Card(this.array[i].urlToImage, `${date.getDate()} ${month}, ${date.getFullYear()}`, this.array[i].title, this.array[i].description, this.array[i].url, this.array[i].source.name);
+                this.container.appendChild(resultCard);
+                this.resultCard = resultCard;
+            }
+        } else {
+            for (let i = 0; i <= 0; i++) {
+                const date = new Date(this.array[i].publishedAt);
+                const month = this.arr[date.getMonth()-1];
+                
+                const { resultCard } = new Card(this.array[i].urlToImage, `${date.getDate()} ${month}, ${date.getFullYear()}`, this.array[i].title, this.array[i].description, this.array[i].url, this.array[i].source.name);
+                this.container.appendChild(resultCard);
+                this.resultCard = resultCard;
+            }
         }
+        this.button.setAttribute('style', 'display: block');
+        this.container.setAttribute('style', 'margin-bottom: 0;')
     }
 
     delete() {

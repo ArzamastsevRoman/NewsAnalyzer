@@ -1,6 +1,7 @@
 export default class AnalyticsResult {
-    constructor (container, total, headers) {
+    constructor (container, request, total, headers) {
         this.container = container;
+        this.request = request;
         this.total = total;
         this.headers = headers;
         
@@ -10,8 +11,8 @@ export default class AnalyticsResult {
     }
 
     addContent() {
-        this.title.textContent = localStorage.getItem('request');
-        this.spanEvvrething.textContent = localStorage.getItem('resultEver');
-        this.spanHeaders.textContent = localStorage.getItem('resultTitle');
+        this.title.textContent = this.request;
+        this.spanEvvrething.textContent = this.total;
+        this.spanHeaders.textContent = this.headers;
     }
 }

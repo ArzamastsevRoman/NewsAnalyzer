@@ -7,19 +7,22 @@ import '../../blocks/news/news.css'
 import '../../blocks/histogram/histogram.css'
 import '../../blocks/footer/footer.css'
 
-const newsContainer = document.querySelector('.news__container');
-
 import AnalitycsResult from './analytics-result/analytics-result'
 
-const analitycsResult = new AnalitycsResult (newsContainer)
+import HistogramColumns from './histogram-columns/histogram-columns'
+
+const newsContainer = document.querySelector('.news__container');
+
+const request = localStorage.getItem('request');
+const resultEver = localStorage.getItem('resultEver');
+const resultHeader = localStorage.getItem('resultTitle');
+
+const analitycsResult = new AnalitycsResult (newsContainer, request, resultEver, resultHeader);
 analitycsResult.addContent();
 
 const histogramContent = document.querySelector('.histogram__content')
 
-import HistogramColumns from './histogram-columns/histogram-columns'
-
 const histogramColumns = new HistogramColumns (histogramContent);
 histogramColumns.dayColumn();
-histogramColumns.addContent();
 histogramColumns.addDayColumn();
 histogramColumns.addMonth();

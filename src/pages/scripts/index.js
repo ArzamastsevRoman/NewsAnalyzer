@@ -12,6 +12,8 @@ import '../../blocks/result/result.css'
 import '../../blocks/visually-hidden/visually-hidden.css'
 
 import Validate from './validate/validate'
+import Api from './api/api'
+import CardList from './cardList/cardList'
 
 const input = document.querySelector('.search__input');
 const contentInput = document.querySelector('.search__content-input');
@@ -19,8 +21,6 @@ const contentInput = document.querySelector('.search__content-input');
 const validate = new Validate (contentInput);
 
 const button = document.querySelector('.search__button');
-
-import Api from './api/api'
 
 const today = new Date();
 const to = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`
@@ -42,7 +42,6 @@ const error = document.querySelector('.result__error');
 
 export {preloader, result, notFound, error}
 
-import CardList from './cardList/cardList'
 const resultContent = document.querySelector('.result__content');
 
 function createCard (arr) {
@@ -85,14 +84,14 @@ button.addEventListener('click', () => {
                 } 
                 console.log(arrayStart);
                 createCard(arrayStart);
-            } else {
-                error.setAttribute('style', 'display: block'); 
-                alert(`${err}: ${err.status}`);
-        
             }
         })
 		.catch(err => { 
-			console.log(`${err}: ${err.status}`); 
+            alert(`${err}: ${err.status}`);
+            error.setAttribute('style', 'display: block'); 
+            result.setAttribute('style', 'display: none');
+            preloader.setAttribute('style', 'display: none');
+			console.log(`catch err: ${err}: ${err.status}`); 
         });;
 })
 
