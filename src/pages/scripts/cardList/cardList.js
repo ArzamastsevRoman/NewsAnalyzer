@@ -9,10 +9,8 @@ export default class CardList {
         this.check = this.check.bind(this);
         this.button = document.querySelector('.result__button');
         
-        
         this.button.onclick = this.render;
             
-
         this.button
             .addEventListener('click', this.check);
         
@@ -34,7 +32,8 @@ export default class CardList {
     }
 
     render() {
-        if (this.array.length > 3) {
+        const countCards = 3;
+        if (this.array.length > countCards) {
             for (let i = 0; i <= 2; i++) {
                 const date = new Date(this.array[i].publishedAt);
                 const month = this.arr[date.getMonth()-1];
@@ -63,7 +62,7 @@ export default class CardList {
             }
         }
         this.button.setAttribute('style', 'display: block');
-        //this.container.removeAttribute('style', 'margin: 64px auto;')
+        this.container.removeAttribute('style', 'margin-bottom: 64px;')
     }
 
     delete() {
@@ -76,8 +75,7 @@ export default class CardList {
     diactivatedButton () {
         if (this.array.length === 0) {
             this.button.setAttribute('style', 'display: none');
-            this.container.setAttribute('style', 'margin-bottom: 64px;')
-            //this.button.removeEventListener('click', this.diactivatedButton);
+            this.container.setAttribute('style', 'margin-bottom: 64px;');
         }
   	}
 }

@@ -1,6 +1,5 @@
 import Glide from '@glidejs/glide'
 
-
 import '../../../blocks/glide/glide.theme.css'
 import '../../../blocks/glide/glide.core.css'
 
