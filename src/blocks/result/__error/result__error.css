@@ -1,0 +1,10 @@
+.result__error {
+    font-family: roboto-regular, sans-serif;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: #1a1b22;
+    margin: 16px auto 80px;
+    width: calc(100% - 216px);
+    text-align: center;
+    display: none;
+}

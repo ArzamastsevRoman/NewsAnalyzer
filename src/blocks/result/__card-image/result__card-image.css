@@ -1,5 +1,19 @@
 .result__card-image {
     width: 100%;
+    min-height: 272px;
+    max-height: 272px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .result__card-image {
+        min-height: 150px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .result__card-image {
+        min-height: 196px;
+    }
 }

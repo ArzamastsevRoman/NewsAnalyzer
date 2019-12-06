@@ -1,0 +1,19 @@
+.author__link {
+    margin: 0;
+    font-family: roboto-regular, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #1a1b22;
+    text-decoration: none;
+    width: 100%;
+}
+
+.author__link:active {
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+    .author__link {
+        font-size: 1rem;
+    }
+}

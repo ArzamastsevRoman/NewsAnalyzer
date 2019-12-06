@@ -1,0 +1,9 @@
+.search__error {
+    font-family: 'roboto-regular', sans-serif;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: red;
+    position: absolute;
+    bottom: -30px;
+    left: 24px;
+}

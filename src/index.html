@@ -25,7 +25,8 @@
             <h1 class="search__title">Что в мире творится?</h1>
             <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
             <div class="search__content-input">
-                <input type="text" class='search__input' placeholder="Введите тему новости" required>
+                <input type="text" required minlength = '2' maxlength = '30' class='search__input' placeholder="Введите тему новости" required>
+                <span id = "error" class="search__error" aria-live = 'polite'></span>
                 <button class='search__button'>Искать</button>
             </div>    
         </div>
@@ -44,62 +45,20 @@
                 <h2 class="result__title">Результаты поиска</h2>
                 <a href="./analytics.html" class="result__link">Посмотреть аналитику <img src="./images/Path_5.png" alt="arrow right"></a>
             </div>
-            <div class="result__content">
-                <div class="result__card">
-                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
-                    <p class="result__card-data">2 августа, 2019</p>
-                    <h3 class="result__card-title">Национальное достояние - парки</h3>
-                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
-                </div>
-                <div class="result__card">
-                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
-                    <p class="result__card-data">2 августа, 2019</p>
-                    <h3 class="result__card-title">Национальное достояние - парки</h3>
-                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
-                </div>
-                <div class="result__card">
-                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
-                    <p class="result__card-data">2 августа, 2019</p>
-                    <h3 class="result__card-title">Национальное достояние - парки</h3>
-                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
-                </div>
-                <div class="result__card">
-                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
-                    <p class="result__card-data">2 августа, 2019</p>
-                    <h3 class="result__card-title">Национальное достояние - парки</h3>
-                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
-                </div>
-                <div class="result__card">
-                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
-                    <p class="result__card-data">2 августа, 2019</p>
-                    <h3 class="result__card-title">Национальное достояние - парки</h3>
-                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
-                </div>
-                <div class="result__card">
-                    <img src="<%=require('./images/card-image.png')%>" alt="image card" class="result__card-image">
-                    <p class="result__card-data">2 августа, 2019</p>
-                    <h3 class="result__card-title">Национальное достояние - парки</h3>
-                    <p class="result__card-content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="https://lenta.ru/" target="_blank" class="result__card-link">ЛЕНТА.РУ</a>
-                </div>
-            </div>
+            <p class="result__error">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</p>
+            <div class="result__content"></div>
             <button class="result__button">Показать ещё</button>
         </section>
         <section class="author">
             <div class="author__container">
                 <picture>
-                    <source srcset="<%=require('./images/avatar.png')%>" type="image/png+xml">
-                    <img src="<%=require('./images/avatar.jpg')%>" alt="avatar" class="author__avatar">
+                    <source srcset="<%=require('./images/avatar-me.png')%>" type="image/png+xml">
+                    <img src="<%=require('./images/avatar-me.jpg')%>" alt="avatar" class="author__avatar">
                 </picture>
                 <div class="author__content">
                     <h3 class="author__title">Об авторе</h3>
-                    <p class="author__about">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
-                    <p class="author__about">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут связаться.</p>
+                    <p class="author__about">Меня зовут Арзамасцев Роман Сергеевич, я – начинающий Фронтенд-разработчик. Очень нравится программировать, и хочу заниматься этим профессионально. В течение полугода прошёл курс Фронтенд-разработчика в Яндекс Практикуме. Владею HTML, CSS, Javascript, GIT и Webpack, кроссбраузерной и адаптивной вёрсткой. В создании проектов использую методологию БЭМ, работал с макетами используя Figma. Хочу изучить JS React и готов к развитию в этом направлении.</p>
+                    <p class="author__about">Примеры моих учебных работ <a href="https://yadi.sk/d/3ktMRfdNH9ZW_Q" target="_blank" class="author__link">https://yadi.sk/d/3ktMRfdNH9ZW_Q</a>, а связаться со мной можно по e-mail arzamastsevroma@yandex.ru или по телефону +7-925-021-46-63.</p>
                 </div>
             </div>
         </section>
