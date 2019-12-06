@@ -63,7 +63,7 @@ export default class CardList {
             }
         }
         this.button.setAttribute('style', 'display: block');
-        this.container.setAttribute('style', 'margin-bottom: 0;')
+        //this.container.removeAttribute('style', 'margin: 64px auto;')
     }
 
     delete() {
@@ -77,7 +77,7 @@ export default class CardList {
         if (this.array.length === 0) {
             this.button.setAttribute('style', 'display: none');
             this.container.setAttribute('style', 'margin-bottom: 64px;')
-            this.button.removeEventListener('click', this.diactivatedButton);
+            //this.button.removeEventListener('click', this.diactivatedButton);
         }
   	}
 }
